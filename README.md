@@ -204,3 +204,6 @@ RabbitMQ se ejecuta mediante Docker Compose para facilitar la configuración del 
 
 ## ProducerService
 El ProducerService es el microservicio encargado de publicar mensajes hacia RabbitMQ. Este servicio permite enviar alertas usando exchanges de tipo Direct, Topic y Fanout. Gracias a esta separación, el productor no conoce directamente a los consumidores, sino que se comunica únicamente con el broker de mensajes.
+
+## Consumer Services
+Los consumidores son microservicios independientes que escuchan colas específicas de RabbitMQ. SecurityConsumerService procesa mensajes dirigidos al equipo de seguridad, mientras que AuditConsumerService registra eventos para auditoría. Esta separación permite bajo acoplamiento y una arquitectura más mantenible.
