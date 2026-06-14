@@ -201,3 +201,6 @@ docker compose down -v
 
 ## Docker y RabbitMQ
 RabbitMQ se ejecuta mediante Docker Compose para facilitar la configuración del broker de mensajes. Esta configuración permite levantar el servicio de RabbitMQ de forma rápida y acceder a su panel de administración desde el navegador en http://localhost:15672.
+
+## ProducerService
+El ProducerService es el microservicio encargado de publicar mensajes hacia RabbitMQ. Este servicio permite enviar alertas usando exchanges de tipo Direct, Topic y Fanout. Gracias a esta separación, el productor no conoce directamente a los consumidores, sino que se comunica únicamente con el broker de mensajes.
