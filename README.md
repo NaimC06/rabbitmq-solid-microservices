@@ -207,3 +207,6 @@ El ProducerService es el microservicio encargado de publicar mensajes hacia Rabb
 
 ## Consumer Services
 Los consumidores son microservicios independientes que escuchan colas específicas de RabbitMQ. SecurityConsumerService procesa mensajes dirigidos al equipo de seguridad, mientras que AuditConsumerService registra eventos para auditoría. Esta separación permite bajo acoplamiento y una arquitectura más mantenible.
+
+## Principios SOLID aplicados
+El proyecto aplica principios SOLID mediante clases con responsabilidad única, interfaces pequeñas y separación clara entre productor, consumidores y servicios compartidos. La lógica de conexión, publicación, consumo, serialización y procesamiento de mensajes se encuentra dividida en clases específicas, evitando que una sola clase tenga demasiadas responsabilidades.
