@@ -198,3 +198,6 @@ Para detenerlo y borrar datos:
 ```bash
 docker compose down -v
 ```
+
+## Docker y RabbitMQ
+RabbitMQ se ejecuta mediante Docker Compose para facilitar la configuración del broker de mensajes. Esta configuración permite levantar el servicio de RabbitMQ de forma rápida y acceder a su panel de administración desde el navegador en http://localhost:15672.
